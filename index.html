@@ -5,6 +5,19 @@
     <meta http-equiv="refresh" content="0;https://instagram.com/ahri.x6" />
   </head>
   <body>
-   <p id="txt">redirecting</p>
+   <p id="txt">Redirecting</p>
+   <script>
+     const p = document.getElementById('txt');
+     setInterval(
+       () => {
+         if(Array.from(document.querySelectorAll('.dot')).length >= 3) {
+           p.innerHTML = 'Redirecting';
+         } else {
+           p.innerHTML += '<span class="dot">.</span>';
+         }
+         return 0;
+       },
+       1000
+     );
   </body>
 </html>
